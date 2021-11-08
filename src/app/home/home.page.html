@@ -1,15 +1,15 @@
 <ion-content [fullscreen]="true">
   <div class="container">
-    <h1>Pesquise seu CEP</h1>
+    <h1>Digite um CEP</h1>
     <div class="align">
       <input (blur)="search()" [(ngModel)]="adress.cep" type="text" mask="00000-000" placeholder="CEP" (keyup.enter)="search()">
-      <button (click)="search()">
-        <ion-icon name="search-outline"></ion-icon>
-      </button>
       <input placeholder="Cidade" value="{{adresses.localidade}}">
       <input placeholder="Estado" value="{{adresses.uf}}">
       <input placeholder="Bairro" value="{{adresses.bairro}}">
       <input placeholder="Rua" value="{{adresses.logradouro}}">
+      <button (click)="search()">
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
     </div>
   </div>
 
