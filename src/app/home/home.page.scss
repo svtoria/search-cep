@@ -1,27 +1,27 @@
-#container {
-  text-align: center;
+ion-content{
+  --background: #121212;
+ .container{
+  margin-left: 650px;
+  margin-top: 150px;
+  color: #fff;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  transform: scale(1.5);
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  button{
+    width: 10%;
+    height: 30px;
+  }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  input{
+    background-color: #121212;
+    border: 1px solid #fff;
+    margin-right: 10px;
+    margin-bottom: 13px;
+    color: #fff;
+    width: 50%;
+    padding: 4px;
+  }
+ }
 }

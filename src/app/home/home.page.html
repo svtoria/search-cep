@@ -1,20 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="container">
+    <h1>Pesquise seu CEP</h1>
+    <div class="align">
+      <input (blur)="search()" [(ngModel)]="adress.cep" type="text" mask="00000-000" placeholder="CEP" (keyup.enter)="search()">
+      <button (click)="search()">
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+      <input placeholder="Cidade" value="{{adresses.localidade}}">
+      <input placeholder="Estado" value="{{adresses.uf}}">
+      <input placeholder="Bairro" value="{{adresses.bairro}}">
+      <input placeholder="Rua" value="{{adresses.logradouro}}">
+    </div>
   </div>
+
 </ion-content>

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,27 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  public adresses: any = [];
+  public adress: Address = {
+    cep: '',
+  };
 
+  constructor(private http: HttpClient) { }
+
+  public search() {
+    if (this.adress.cep === '') {
+      alert('Insira um CEP')
+      return;
+    }
+
+    this.http.get(`https://viacep.com.br/ws/${this.adress.cep}/json/`).subscribe(r => {
+      this.adresses = r;
+      console.log(r);
+    });;
+
+  }
+}
+
+interface Address {
+  cep: string;
 }
